@@ -1,0 +1,12 @@
+.angular/
+.svelte-kit/
+dist/
+node_modules/
+tmp/
+
+!.commitlintrc.js
+!.eslintrc.js
+!.lintstagedrc.js
+!.pnpmfile.cjs
+!.prettierrc.js
+!.stylelintrc.js

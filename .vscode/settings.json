@@ -1,0 +1,244 @@
+{
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.nx": true,
+        "**/.ruff_cache": true,
+        "**/.svn": true,
+        "**/.venv": true,
+        "**/CVS": true,
+        "**/node_modules": true,
+        "**/tmp": true,
+        "**/Thumbs.db": true
+    },
+    "files.associations": {
+        "**/ansible/**/*.yml": "ansible",
+        "**/ansible/inventories/**/hosts": "ini"
+    },
+    // #region Telemetry
+    "redhat.telemetry.enabled": false,
+    "intelephense.telemetry.enabled": false,
+    // #endregion Telemetry
+    // #region Markdown
+    "[markdown]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        },
+        "editor.wordWrap": "on",
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "cSpell.fixSpellingWithRenameProvider": true,
+        "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+        "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
+    },
+    "markdown.math.enabled": true,
+    // #endregion Markdown
+    // #region JSON/JSONC
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // #endregion JSON/JSONC
+    // #region YAML
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "yaml.format.singleQuote": true,
+    "yaml.format.bracketSpacing": false,
+    // #endregion YAML
+    // #region TOML
+    "[toml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "tamasfe.even-better-toml",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    "evenBetterToml.formatter.alignEntries": true,
+    "evenBetterToml.formatter.alignComments": true,
+    "evenBetterToml.formatter.arrayTrailingComma": true,
+    "evenBetterToml.formatter.allowedBlankLines": 2,
+    // #endregion TOML
+    // #region Typst
+    "[typst]": {
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.wordWrap": "on",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.unicodeHighlight.ambiguousCharacters": false
+    },
+    "typst-lsp.exportPdf": "never",
+    // #endregion Typst
+    // #region HTML
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    // #endregion HTML
+    // #region CSS/SCSS
+    "[css]": {
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    "[scss]": {
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    "css.validate": false,
+    "scss.validate": false,
+    "stylelint.validate": [
+        "css",
+        "scss"
+    ],
+    // #endregion CSS/SCSS
+    // #region JS/TS
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    "javascript.validate.enable": false,
+    "typescript.validate.enable": false,
+    // #endregion JS/TS
+    // #region Python
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "ruff.path": [
+        ".venv/bin/ruff"
+    ],
+    "ruff.interpreter": [
+        ".venv/bin/python"
+    ],
+    // #endregion Python
+    // #region Go
+    "[go]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    // #endregion Go
+    // #region Rust
+    "[rust]": {
+        "editor.tabSize": 4,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    // #endregion Rust
+    // #region PHP
+    "[php]": {
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+    },
+    // #endregion PHP
+    // #region Prisma
+    "[prisma]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Prisma.prisma",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    // #endregion Prisma
+    // #region Ansible
+    "[ansible]": {
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize",
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "comments": true,
+            "other": true,
+            "strings": true
+        }
+    },
+    "ansible.python.interpreterPath": ".venv/bin/python"
+    // #endregion Ansible
+}

@@ -1,0 +1,73 @@
+{
+    "name": "template-monorepo",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    "runArgs": [
+        "--name=template-monorepo"
+    ],
+    "containerEnv": {
+        "TZ": "Europe/Berlin"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/go": {
+            "version": "1.21.5"
+        },
+        "ghcr.io/devcontainers/features/rust": {
+            "version": "1.74"
+        },
+        "ghcr.io/devcontainers/features/node": {
+            "version": "20"
+        },
+        "ghcr.io/devcontainers/features/python": {
+            "version": "3.12"
+        },
+        "ghcr.io/devcontainers/features/php": {
+            "version": "8.2"
+        },
+        "ghcr.io/devcontainers-contrib/features/typst": {
+            "version": "0.10.0"
+        },
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true,
+            "upgradePackages": true,
+            "username": "vscode",
+            "userUid": "automatic",
+            "userGid": "automatic"
+        },
+        "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+            "plugins": "zsh-autopair zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search",
+            "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions https://github.com/zsh-users/zsh-syntax-highlighting.git https://github.com/zsh-users/zsh-history-substring-search https://github.com/hlissner/zsh-autopair",
+            "username": "vscode"
+        },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "EditorConfig.EditorConfig",
+                "streetsidesoftware.code-spell-checker",
+                "streetsidesoftware.code-spell-checker-german",
+                "tamasfe.even-better-toml",
+                "nvarner.typst-lsp",
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "charliermarsh.ruff",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "stylelint.vscode-stylelint",
+                "redhat.ansible",
+                "nrwl.angular-console",
+                "Prisma.prisma",
+                "hediet.vscode-drawio"
+            ]
+        }
+    },
+    "postCreateCommand": {
+        "node": "pnpm install",
+        "nodeGlobal": "npm install -g nx @taplo/cli",
+        "python": "pip install poetry && poetry config virtualenvs.in-project true --local && poetry install --no-root",
+        "go": "bash .devcontainer/scripts/download-go-dependencies.sh",
+        "fonts": "bash .devcontainer/scripts/download-fonts.sh"
+    }
+}

@@ -1,0 +1,34 @@
+[tool.poetry]
+name        = "template-monorepo"
+description = "template-monorepo"
+keywords    = ["template", "monorepo"]
+version     = "0.0.0"
+readme      = "README.md"
+authors     = ["Sebastian Berg <sebastian.berg@handarel.dev>"]
+
+[tool.poetry.dependencies]
+python  = "~3.12"
+jupyter = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff         = "^0.1.8"
+ansible      = "^9.1.0"
+ansible-lint = { version = "^6.22.1", markers = "platform_system != 'Windows'" }
+pipreqs      = "^0.4.13"
+pyinstaller  = "^6.3.0"
+
+[tool.ruff]
+target-version = "py312"
+line-length    = 100
+indent-width   = 4
+
+[tool.ruff.format]
+line-ending               = "auto"
+quote-style               = "single"
+indent-style              = "space"
+skip-magic-trailing-comma = false
+
+
+[build-system]
+requires      = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
